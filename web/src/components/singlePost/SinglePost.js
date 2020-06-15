@@ -85,10 +85,13 @@ export default ({ fetchedPost,
 
     function onSaveClick() {
         setEditMode(false);
-        createMode
-            ? savePost(post)
-            : updatePost(post);
-        closeModal();
+        if (createMode) {
+            savePost(post);
+            closeModal();
+        } else {
+            updatePost(post);
+        }
+
     }
 
     async function onFileUploaded(event) {
