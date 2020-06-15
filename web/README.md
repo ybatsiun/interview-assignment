@@ -1,3 +1,27 @@
+### Results
+
+#### Summary
+
+I have covered all functionality that were required below including new test creation. Installation instructions didn't change.
+
+- React-redux, thunk and Material UI were mainly used. npm library for infinite scroll was used for posts container.
+- There are smoke tests for each of components
+- There is only one only one domain for now - posts. Project structure ( services,actions, reducers) allows to easily add domains thus extending the app.
+
+#### Outro
+
+If I had more time I would:
+- Handle the case when post can have more that one picture (now its hardcoded to have only one)
+- Use prop.types to validate props
+- Adapt UI for mobile view
+- Handle of a variety server and client errors
+- Add localization
+- Extend tests using jest-enzyme or react-testing-library
+- Set header at top
+- Separate SinglePost component into several smaller components
+- Pack the whole solution in Docker
+- Enahance look&feel of the app
+
 ### Assignment
 
 We need a web site for our impacters to administer their posts.
