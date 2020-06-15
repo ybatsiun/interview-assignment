@@ -1,0 +1,50 @@
+{
+  "name": "impacter-posts-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-infinite-scroll-component": "^5.0.5",
+    "react-redux": "^7.2.0",
+    "react-scripts": "^3.3.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm:api\" \"npm:app\"",
+    "app": "react-scripts start",
+    "api": "node mock/server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "fastify": "^2.10.0",
+    "fastify-cors": "^2.2.0",
+    "fastify-multipart": "^1.0.2",
+    "fastify-static": "^2.5.0",
+    "fastify-swagger": "^2.5.0",
+    "http-errors": "^1.7.3",
+    "lorem-ipsum": "^2.0.3",
+    "pump": "^3.0.0",
+    "uuid": "^3.3.3"
+  }
+}

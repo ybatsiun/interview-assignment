@@ -1,0 +1,7 @@
+export const postConstants = {
+    GET_POSTS: 'GET_POSTS',
+    POSTS_FETCHED: 'POSTS_FETCHED',
+    POST_UPDATED: 'POST_UPDATED',
+    POST_DELETED: 'POST_DELETED',
+    POST_SAVED: 'POST_SAVED'
+}
