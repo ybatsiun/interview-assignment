@@ -1,66 +1,28 @@
-# Welcome to Milkywires coding assignment repo
+### Results
 
-This repo gives you the basic setup for our coding assignments and information about the assignment. If you have any questions don't hesitate to reach out.
+#### Summary
 
-# Background
+I have covered all functionality that were required below including new test creation. Installation instructions didn't change.
 
-At Milkywire we work with small local charity organizations that do hands on work in the field. We call people working for these organizations impacters. Impacters continually create posts to keep the users that support them updated with what is happening in the field.
+- React-redux, thunk and Material UI were mainly used. npm library for infinite scroll was used for posts container.
+- There are smoke tests for each of components
+- There is only one only one domain for now - posts. Project structure ( services,actions, reducers) allows to easily add domains thus extending the app.
 
-We now want to create a system that lets impacters administer their posts using an app or the web. It is your task to help build on part of this system.
+#### Outro
 
-# About the assignments
+If I had more time I would:
+- Handle the case when post can have more that one picture (now its hardcoded to have only one)
+- Use prop.types to validate props
+- Adapt UI for mobile view
+- Handle of a variety server and client errors
+- Add localization
+- Extend tests using jest-enzyme or react-testing-library
+- Set header at top
+- Separate SinglePost component into several smaller components
+- Pack the whole solution in Docker
+- Enahance look&feel of the app
 
-We don't expect you to do all parts of the implementation, instead we want you select the part (backend, app or web) that you feel most comfortable with and you think will highlight your skills in the best way.
-
-The goal of this assignment is not to make a perfect solution, but to have something to act as a starting point for a technical discussion during the interview.
-
-Besides the assignment itself, please:
-
-1. Submit the assignment as a repository on github
-
-2. Cover parts of the project with tests. 
-
-3. Think about how you structure your files and folders, maintain good naming conventions, pick libraries for common tasks etc. Write the code as if this project would be extended with more functionality and be maintained by a team.
-
-4. Write down the trade-offs and decisions you have made, stuff you left out (if any), what you would do if you had more time etc. Please also submit this together with the rest of the assignment (eg. in the Readme of your submission repository).
-
-And again if you have any doubts or questions, feel free to bring them up with us at any time. You can reach us at work@milkywire.com.
-
-# Assignments (choose one of them)
-
-## Backend
-
-The system needs a basic API to handle posts.
-
-Create an api using Node.js, the user of the api should be able to
-
-- Get all posts
-- Get all posts for a specific impacter
-- Get a post by id
-- Update a post
-- Delete a post
-
-We have provided a basic setup with a PostgreSQL database that has a basic schema and is populated with data. Feel free to update the schema or exchange any framework that is part of the initial setup if you think that is necessary.
-
-If you feel you have the time, you can also add so the user can create a new post by uploading an image to the API.
-
-## App
-
-We need an app for our impacters to administer their posts.
-
-Create an app using React Native, the user should be able to
-
-- see all posts
-- update a post
-- delete a post
-- open a post in full screen by clicking the post
-- go to the next post in full screen mode
-- delete and update a post in full screen mode
-
-
-If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API.
-
-## Web
+### Assignment
 
 We need a web site for our impacters to administer their posts.
 
@@ -73,5 +35,65 @@ Create a web site, the user should be able to
 - go to the next and previous post in modal mode
 - delete and update a post in modal mode
 
-
 If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API.
+
+**Make sure to write down what you would have done if you had more time, and submit it together with the rest of the assignment.**
+
+## API
+
+We provided a small api for you to use during the development. The api runs on [http://localhost:3001](http://localhost:3001). Below you can find a list of all endpoints. You can find the swagger documentation for the api at [http://localhost:3001/docs](http://localhost:3001/docs)
+
+`GET /impacters` - List all impacters
+
+`GET /impacters/:id` - Get a impacter
+
+`GET /impacters/:id/posts` - Get all posts for an impacter
+
+`GET /posts?limit={}&offset={}` - List posts, if no limit is set it will list all posts
+
+`POST /posts` - Create a new post
+
+`GET /posts/:id` - Get a post
+
+`PUT /posts/:id` - Update a post
+
+`DELETE /posts/:id` - Delete a post
+
+`POST /upload` - Upload a new image and get a url back
+
+If you want the api to generate new data remove the `./mock/data.json` file. Please be aware that this will take some time and will be done by the server on the next start. The server will not start until it's done generating data.
+
+## Images
+
+All images follow this url structure `https://picsum.photos/id/{pictureId}/{width}/{height}` and are given in their original size from the API.
+
+You can change the size of an image by changing the two last values of the path.
+
+Example:
+
+Original: https://picsum.photos/id/1000/5626/3635
+
+Downsize to 308 x 199: https://picsum.photos/id/1000/308/199
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app and the api in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
