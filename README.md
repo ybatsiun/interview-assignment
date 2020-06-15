@@ -2,11 +2,11 @@
 
 #### Summary
 
-I have covered all functionality that were required below including new test creation. Installation instructions didn't change.
+I have covered all functionality that were required below including new post creation. Installation instructions didn't change.
 
 - React-redux, thunk and Material UI were mainly used. npm library for infinite scroll was used for posts container.
 - There are smoke tests for each of components
-- There is only one only one domain for now - posts. Project structure ( services,actions, reducers) allows to easily add domains thus extending the app.
+- There is only one domain for now - posts. Project structure ( services,actions, reducers) allows to easily add domains thus extending the app.
 
 #### Outro
 
