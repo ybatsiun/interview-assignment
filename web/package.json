@@ -40,7 +40,7 @@
     "fastify": "^2.10.0",
     "fastify-cors": "^2.2.0",
     "fastify-multipart": "^1.0.2",
-    "fastify-static": "^2.5.0",
+    "fastify-static": "^4.2.4",
     "fastify-swagger": "^2.5.0",
     "http-errors": "^1.7.3",
     "lorem-ipsum": "^2.0.3",
